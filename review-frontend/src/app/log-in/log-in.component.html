@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="welcome-screen" [class.hidden]="!showWelcomeScreen">
+        <div class="welcome-content">
+            <h2>Hi! Welcome to my site</h2>
+            <p>Let's go and explore!</p>
+        </div>
+    </div>
+    <div class="screen" [class.hidden]="showWelcomeScreen">
+        <div class="screen__content">
+            <form class="login" (ngSubmit)="onSubmit()">
+                <h1 class="h">Product</h1><br>
+                <h5>Log In</h5>
+                <div class="login__field">
+                    👤
+                    <input type="text" class="login__input" placeholder="User name" [(ngModel)]="user.userName" name="userName" (click)="removeVal()">
+                    <span class="val">{{ValidationUser}}</span>
+                </div>
+                <div class="login__field">
+                    🔏
+                    <input [type]="showPassword ? 'text' : 'password'" class="login__input" placeholder="Password" [(ngModel)]="user.password" name="password" (click)="removeVal()" />
+                    <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+                        {{showPassword ? '😕' : '😌'}}
+                    </button>
+                    <span class="val">{{ValidationPassword}}</span>
+                </div>
+                <button class="button login__submit" type="submit">
+                    <span class="button__text">Log In</span>
+                </button>
+            </form>
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>
+    </div>
+
+    <div class="loading-screen" *ngIf="loading">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <p>Please wait, we are logging in...</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,266 @@
+table tbody tr {
+    cursor: pointer;
+  }
+  
+ table tbody tr.selected {
+    background-color: #bc1e1e !important; /* Light grey background for selected row */
+  }
+  table{
+    z-index: 1;
+  }
+
+
+  .button{
+    /* border: 2px solid black; */
+    border-radius: 2px solid black;
+    
+    width: 43%;
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 60%;
+    
+  }
+
+  .con {
+    border: 2px solid #6A679E;
+    width: 85%;
+    margin-left: 120px;
+    color: #090909;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    background: #817eb380; 
+    border-radius: 8px; 
+    padding: 20px;
+    position: relative; 
+    margin-top: 20px;
+}
+
+
+  .name{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .full h2{
+    /* border: 2px solid black; */
+    margin-right: 10%;
+    width: 50%;
+  }
+  .g{
+    /* border: 2px solid black; */
+    background: linear-gradient(to bottom right, rgb(250, 252, 253), #7875B5);
+    margin-left: 47%;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    margin-top: 30px;
+    width: 50px;
+ 
+  }
+
+  .searchh{
+    border: 2px solid rgb(239, 232, 232);
+    margin-left: 19%;
+    margin-bottom: 6px;
+    background: linear-gradient(to bottom right, rgb(250, 252, 253), #fafafb);
+    height: 38px;
+    border-radius: 22px;
+    width: 70%;
+    margin-top: 8px;
+  }
+
+  .b{
+   
+    display: flex;
+    justify-content: space-around;
+  }
+  .cancel{
+    background: linear-gradient(to bottom right ,#7875B5 , #fafafb );
+    height: 29px;
+    border-radius: 13%;
+    margin-right: 35px;
+    margin-top: 29px;
+    width: 50px;
+
+  }
+
+  .nav{
+    /* border: 2px solid black; */
+    background: rgb(2, 211, 248);
+    border-radius: 10px;
+    width: 900px;
+    margin-left: 25%;
+    margin-top: 10px;
+    background: linear-gradient(to bottom , rgb(255, 255, 255), #7875B5 );
+}
+
+h1{
+    /*   border: 2px solid black;*/
+       margin-left: 170px;
+       color: aliceblue;  
+   }
+
+   .dropdown-menu {
+    display: none;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), #bdbbdd);
+    width: 29%;
+    right: 0;
+    height: 169px;
+    margin-top: -17px;
+    border: #fafafb;
+  }
+  .dropdown-menu.show {
+    display: block;
+  }
+  .dropdown-toggle::after {
+    display: none; /* Hides the default caret icon */
+  }
+ 
+  .searchhh{
+     border: 2px solid rgb(228, 15, 15); 
+     border: 2px solid rgb(239, 232, 232);
+    margin-left: 82%;
+    margin-bottom: 6px;
+    border-radius: 13%;
+  }
+  .cancell{
+  /* border: 2px solid rgb(6, 21, 187); */
+  height: 29px;
+  background: linear-gradient(to bottom right ,#7875B5 , #fafafb );
+  border-radius: 13%;
+  margin-right: 35px;
+
+  }
+
+  .submittt{
+    /* border: 2px solid rgb(15, 228, 82); */
+    background: linear-gradient(to bottom right , #fafafb ,#7875B5 );
+    margin-left: 90%;
+    margin-bottom: 10px;
+    border-radius: 10%;
+  }
+
+  .footer{
+    /* border: 2px solid black; */
+    background: linear-gradient(to bottom right , rgb(255, 255, 255) , #6A679E);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 5px;
+   
+}
+
+footer p{
+    color: aliceblue;
+    padding-left: 35%;
+    margin-bottom: 1px;
+    margin-top: 10px;
+    position: sticky;
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  z-index: 1000; /* make sure it is above everything else */
+}
+
+.loading-content {
+  text-align: center; /* center the text */
+}
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.3); /* light color for the border */
+  border-top: 8px solid white; /* main color for the top */
+  border-radius: 50%; /* make it a circle */
+  width: 50px; /* size of the loader */
+  height: 50px; /* size of the loader */
+  animation: spin 1s linear infinite; /* animation properties */
+  margin-bottom: 10px; /* space between loader and text */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* start position */
+  }
+  100% {
+    transform: rotate(360deg); /* end position */
+  }
+}
+
+.searchfields{
+ 
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 100px;
+}
+.searchfields {
+  position: relative;
+  margin-top: 20px; 
+}
+
+.date-box {
+  background: linear-gradient(to bottom right , #b1aee9, rgb(255, 255, 255));
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin-top: 213px;
+    width: 170px;
+    position: absolute;
+    right: 260px;
+    border-radius: 5px;
+}
+
+
+.date-box label {
+  display: block; 
+  margin-top: 10px; 
+}
+
+.date-box input {
+  margin-top: 5px; 
+}
+.s{
+  width: 18%;
+  border-radius: 10px;
+  background: #e5e4f9;
+  left: 0;
+}
+.datebtn{
+  border: 2px solid rgb(192, 192, 235);
+  background: linear-gradient(to bottom right , #b1aee9, rgb(255, 255, 255));
+  border-radius: 3px;
+  height: 40px;
+}
+.gs{
+    border-radius: 3px;
+    width: 50px;
+    background: linear-gradient(to bottom right , #b1aee9, rgb(255, 255, 255));
+}
+.cancels{
+    border-radius: 3px;
+    background: linear-gradient(to bottom right , rgb(255, 255, 255),#b1aee9);
+}
+.tbl{
+    width: 102%;
+    margin-left: -12px;
+}
+ 

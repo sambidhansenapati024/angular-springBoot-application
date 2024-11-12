@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+   
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right , rgb(255, 255, 255) , #7875B5);
+    width: 100%;
+    height: 100%;
+    transition: background 2s, color 0.9s;
+}
+
+body.dark-mode {
+    background: linear-gradient(to bottom right, #3d3939, #554e4e);
+    color: #ffffff;
+}
+
+
+
+body.dark-mode .navigation {
+    background: #333;
+}
+.h{
+    color: #edf1f4;
+}
+.navigation{
+    background: linear-gradient(to bottom right , rgb(255, 255, 255) , #7875B5);
+}
+h1 {
+    margin-left: 570px;
+    color: aliceblue;  
+}
+
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+/* Style for the toggle button */
+#theme-toggle {
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#toggle-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+#toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#toggle-icon {
+    font-size: 20px; /* Adjust icon size */
+    color: #000; /* Color of the icon */
+}
+
+body.dark-mode #toggle-icon {
+    color: #fff; /* Change icon color in dark mode */
+}
+

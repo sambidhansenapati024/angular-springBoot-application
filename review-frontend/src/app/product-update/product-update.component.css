@@ -1,0 +1,26 @@
+
+body{
+    width: 100%;
+    height: 800px;
+}
+
+span{
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+
+label{
+    font-weight: bold;
+}
+.h2{
+    margin-left: 500px;
+}
+.bot{
+    
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -40px;
+    margin-top: 32px;
+}

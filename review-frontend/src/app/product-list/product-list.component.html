@@ -1,0 +1,81 @@
+
+<div class="full">
+      <div class="con">
+        <div class="searchfields">
+          <input type="search" class="s" placeholder="Enter userName" [(ngModel)]="searchName">
+          <!-- <input type="search" class="s" placeholder="Enter platform" [(ngModel)]="searchorderFrom"> -->
+          <input type="search" class="s" placeholder="Enter Status" [(ngModel)]="searchStatus">
+          <input type="search" class="s" placeholder="search stocks" [(ngModel)]="searchStock">
+          
+          <button (click)="toggleDropDown()" class="datebtn">Date▽</button>
+        
+          <div *ngIf="showDateFields" class="date-box"> <!-- Conditional display with a styled box -->
+            <label for="startDate">From:</label>
+            <input type="date" [(ngModel)]="searchStartDate">
+            <label for="endDate">To:</label>
+            <input type="date" [(ngModel)]="searchEndDate">
+          </div>
+          <div class="form-group">
+            <select class="form-select" id="orderFrom" [(ngModel)]="searchorderFrom" name="orderFrom">
+                <option value="" disabled selected>Select Platform</option>
+                <option *ngFor="let platform of platforms" [value]="platform.name">
+                    {{ platform.name }}
+                </option>
+            </select>
+        </div> 
+          <button class="gs" (click)="onEnter()"><i class="bi bi-search"></i></button>
+            <button class="cancels" (click)="onCancel()">Clear</button>
+        
+          
+        </div>
+        <div style="overflow-x: auto;" class="tbl">
+          <table class="table table-striped table-info table-hover" id="myTable">
+            <thead>
+              <tr>
+              <th>productId</th>
+              <th>productName</th>
+              <th>orderFrom</th>
+              <th>userName</th>
+              <th>orderDate</th>
+              <th>price</th>
+              <th>stock</th>
+              <th>email</th>
+              <th>delevaryType</th>
+              <th>dispatchDate</th>
+              <th>status</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+         </div>
+         <div class="button">
+          <button (click)="create()" class="btn btn-outline-info">Create🖋️</button>
+          <button (click)="update()" class="btn btn-outline-warning">Update🛠️</button>
+          <button (click)="deleteEmp()" class="btn btn-danger">Delivery <i class="bi bi-truck"></i></button>
+          <button (click)="logOut()" class="btn btn-danger">Log Out</button>
+          <br>
+          <br><br>
+          <!-- <button (click)="finalDelete()" class="btn btn-danger"> 🗑️ Permanently</button> -->
+        </div> 
+        </div>
+      
+  
+        
+    <footer>
+      <div class="footer">
+          <p>copyright reserver &#64;sambidhan </p>
+      </div>
+  </footer>
+  
+  <div class="loading-screen" *ngIf="loading">
+      <div class="loading-content">
+        <div class="loader"></div>
+        <p>Please wait, we are logging out...</p>
+      </div>
+    </div>
+      
+      </div>
+        
+      
+  

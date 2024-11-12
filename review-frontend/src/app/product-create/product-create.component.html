@@ -1,0 +1,71 @@
+
+<div class="container">
+    <h2 class="h2">Create Product</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="productId">ProdutId</label>
+            <input type="text" (click)="removeValidator()" class="form-control" id="productId" [(ngModel)]="product.productId" name="productId">
+             <span>{{validationProdId}}</span>
+          </div>
+          <div class="form-group">
+            <label for="productName">ProductName</label>
+            <select class="form-select" id="productName" [(ngModel)]="product.productName" name="productName" (change)="onProductNameChange($event)">
+                <option value="" disabled selected>Select Your Product</option>
+                <option *ngFor="let productsName of productName" [value]="productsName.name">
+                    {{ productsName.name }}
+                </option>
+            </select>
+            <span>{{validationProductName}}</span>
+        </div> 
+      <div class="form-group">
+        <label for="orderFrom">Platform</label>
+        <select class="form-select" id="orderFrom" [(ngModel)]="product.orderFrom" name="orderFrom" >
+            <option value="" disabled selected>Select Your Platform</option>
+            <option *ngFor="let platform of platforms" [value]="platform.name">
+                {{ platform.name }}
+            </option>
+        </select>
+        <span>{{validationOrderFrom}}</span>
+    </div> 
+    <div class="form-group" *ngIf="product.orderFrom">
+        <label for="userName">Enter {{ product.orderFrom }} Username</label>
+        <input type="text" class="form-control" id="userName" [(ngModel)]="product.userName" name="userName">
+        <span>{{validationUserName}}</span>
+    </div>
+      <div class="form-group">
+        <label>Delivery Type</label><br>
+        <div>
+            <input type="radio" id="Fasr" name="Fast" [(ngModel)]="product.delevaryType" value="Fast">
+            <label for="male">Fast</label>
+        </div>
+        <div>
+            <input type="radio" id="Economy" name="Economy" [(ngModel)]="product.delevaryType" value="Economy">
+            <label for="female">Economy</label>
+        </div>
+        <span>{{validationDelvType}}</span>
+    </div>
+     
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" (click)="removeValidator()" class="form-control" id="price" [(ngModel)]="product.price" name="price" readonly>
+        <span>{{validationPrice}}</span> 
+      </div>
+      <div class="form-group">
+        <label for="stock">Stocks</label>
+        <input type="text" (click)="removeValidator()" class="form-control" id="stock" [(ngModel)]="product.stock" name="stock">
+        <span>{{validationStock}}</span> 
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" (click)="removeValidator()" class="form-control" id="email" [(ngModel)]="product.email" name="email">
+        <span>{{validationEmail}}</span> 
+      </div>
+     <div class="bot">
+      <button type="submit" class="btn btn-success"> Save🔏</button>
+      <Button class="btn btn-danger" (click)="goToProductList()"> <i class="bi bi-x-octagon"></i> </Button>
+    </div>
+      
+    </form>
+  </div>
+  
+
